@@ -1,9 +1,3 @@
-This is the description we show on the course page [here](https://lab.github.com/CamSoper/microservices-devops-aspnet-core). This first paragraph will be featured at the top of the page so make it great.
-​
+# IMPORTANT
 
-​
-Be sure to tell the learner about the technology you are teaching, why they should learn it, how they can use it, and what you will teach them.
-​
-
-
-Include information on how they can reach you for questions about the content or course. 
+The following is just a copy/paste of another lab in Github labs that I'm using as a starting point. There's no content from the eShop-Learn modules beyond this point.
