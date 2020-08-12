@@ -1,5 +1,5 @@
-title: microservices-devops-aspnet-core
-description: Microservices devops with ASP.NET Core
+title: Deploy a cloud-native ASP.NET Core microservice with GitHub Actions
+description: Not really. Please don't use this lab yet but I needed to publish it to have something to link to. 🤷🏻‍♂️
 template:
   repo: microservices-devops-aspnet-core-template
   name: microservices-devops-aspnet-core
