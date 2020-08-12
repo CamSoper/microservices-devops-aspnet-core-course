@@ -1,5 +1,5 @@
 title: Deploy a cloud-native ASP.NET Core microservice with GitHub Actions
-description: Not really. Please don't use this lab yet. It's not done, but I needed to publish it to have something to link to. 🤷🏻‍♂️
+description: Not really. Please don't use this lab yet unless you're here because you work with me. It's not done, but I needed to publish it to have something to link to. 🤷🏻‍♂️
 template:
   repo: microservices-devops-aspnet-core-template
   name: microservices-devops-aspnet-core
