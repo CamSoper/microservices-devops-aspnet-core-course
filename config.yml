@@ -1,0 +1,16 @@
+title: microservices-devops-aspnet-core
+description: Microservices devops with ASP.NET Core
+template:
+  repo: microservices-devops-aspnet-core-template
+  name: microservices-devops-aspnet-core
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
