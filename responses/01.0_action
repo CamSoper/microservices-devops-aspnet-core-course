@@ -1,0 +1,13 @@
+# Exercise - Implement a GitHub Action to build and deploy to ACR and AKS
+
+## Overview
+
+In this exercise you'll implement and test a simple CI/CD pipeline by doing the following:
+
+- Create an Azure Container Registry (ACR) instance
+- Set up permissions to deploy to ACR and AKS from GitHub
+- Create a GitHub action to implement a simple CI/CD pipeline
+- Modify the SPA application
+- Update the SPA version in the Helm chart
+- Verify that the changes where deployed to the AKS cluster.
+- Rollback a deployment
