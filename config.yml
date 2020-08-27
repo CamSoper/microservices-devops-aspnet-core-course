@@ -28,7 +28,7 @@ steps:
 
         # Respond in the issue the user just commented on
       - type: respond
-        with: 00.0_setup.md
+        with: 00.2_response.md
         # Include a `data` object to provide some template variables
         data:
           # Reference the `new_issue` url value from the store
