@@ -8,9 +8,9 @@ before:
   - type: updateBranchProtection
   - type: createIssue
     title: Welcome
-    body: 00.0_welcome.md
+    body: 00.0_setup.md
     comments:
-      - 00.1_first-steps.md
+      - 00.1_steps.md
     data:
       dockerfileUrl: '%payload.repository.html_url%/new/master?filename=action-a/Dockerfile'
 
