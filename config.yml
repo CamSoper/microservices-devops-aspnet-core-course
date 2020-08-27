@@ -22,8 +22,6 @@ steps:
       - type: createIssue
         title: New issue
         body: 01.0_action.md
-        comments:
-          - 01.1_steps.md
         # Store the url for this new issue using the custom new_issue value
         store: 
           new_issue_url: '{{ result.data.html_url }}'
