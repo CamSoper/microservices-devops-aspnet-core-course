@@ -13,36 +13,35 @@ before:
       - 00.1_steps.md
     data:
       dockerfileUrl: '%payload.repository.html_url%/new/master?filename=action-a/Dockerfile'
-
 steps:
-  # 1 - Add a Dockerfile
-  - title: Add a Dockerfile
-    description: Start your action by creating a Dockerfile
+  - title: Setup the environment
+    description: Set up your AKS deployment...
     event: pull_request
-    link: "{{ repoUrl }}/issues/1"
+    link: '{{ repoUrl }}/issues/1'
     actions:
       - type: gate
         gates:
-          - left: "%payload.action%"
+          - left: '%payload.action%'
             operator: ===
             right: opened
-          - left: "%payload.action%"
+          - left: '%payload.action%'
             operator: ===
             right: synchronize
-      - type: getTree
-        action_id: tree
-        recursive: true
-        sha: "%payload.pull_request.head.sha%"
-      - type: gate
-        left: "%actions.tree.data.tree%"
-        operator: includes
-        right: path:action-a/Dockerfile
-        else:
-          type: respond
-          with: 01.1_e-no-docker.md
+
+  - title: Close this issue
+    event: issue.closed
+    actions:
+      - type: createIssue
+        title: New issue
+        body: 00.0_setup.md
+        # Store the url for this new issue using the custom new_issue value
+        store: 
+          new_issue_url: '{{ result.data.html_url }}'
+
+        # Respond in the issue the user just commented on
       - type: respond
-        with: 01.0_docker-success.md
+        with: 00.0_setup.md
+        # Include a `data` object to provide some template variables
         data:
-          actionAUrl: "%payload.repository.html_url%/new/%payload.pull_request.head.ref%?filename=action-a/entrypoint.sh"
-      - type: closeIssue
-        issue: Welcome
+          # Reference the `new_issue` url value from the store
+          nextIssueUrl: '{{ store.new_issue_url }}'
